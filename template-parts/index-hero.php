@@ -1,6 +1,7 @@
 <?php 
         $heroImg = get_field("hero_image");
-         
-        ?>
 
-<p><?php echo esc_url($heroImg["url"]) ?></p>
+        ?>
+<section>
+<img src="<?php echo esc_url($heroImg["url"]) ?>" alt="">
+</section>
