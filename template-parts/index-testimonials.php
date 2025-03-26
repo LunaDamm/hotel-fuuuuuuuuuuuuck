@@ -7,8 +7,8 @@
 ?>
 
 <section>
-    <img src="" alt=""><?php echo esc_url($testimonialImg['url']); ?>
+    <img src="<?php echo esc_url($testimonialImg['url']); ?>" alt="">
     <h1><?php echo esc_html($testimonialName); ?></h1>
     <p><?php echo esc_html($testimonialText); ?></p>
-    <?php echo esc_html($testimonailRating); ?>
+    <p><?php echo esc_html($testimonailRating); ?></p>
 </section>
