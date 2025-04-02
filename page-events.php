@@ -1,7 +1,15 @@
 <?php get_header() ?>
+<?php
+            $arguments = array(
+                "post_type" => "events",
+                "posts_per_page" => -1
+            );
 
-<?php if(have_posts()): ?>
-    <?php while(have_posts()): the_post() ?>
+            $loop = new WP_Query($arguments);
+            ?>
+
+            <?php if($loop->have_posts()): ?>
+                <?php while($loop->have_posts()): $loop->the_post() ?>
 
     <?php
     $eventTitle = get_the_title();
@@ -14,7 +22,7 @@
 <section>
 
 <img src="<?php echo esc_url($eventImg['url']); ?>" alt="">
-    <h1><?php echo esc_html($eventDescription); ?></h1>
+    <p><?php echo esc_html($eventDescription); ?></p>
     <p><?php echo esc_html($eventSchedule); ?></p>
 
 </section>
