@@ -1,4 +1,3 @@
-<b>lmao</b>
 <?php
     $testimonialImg = get_field('testimonial_image');
     $testimonialName = get_field('testimonial_name');

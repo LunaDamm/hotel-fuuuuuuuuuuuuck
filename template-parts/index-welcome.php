@@ -1,14 +1,16 @@
 
 <?php 
 
-$welcomeText = get_field("welcome-Text");
-$welcomeTextSmall = get_field("welcome-Text-Small")
+$welcomeText = get_field("welcome-text");
+$welcomeTextSmall = get_field("welcome-text-small")
 
 ?>
 
 <section>
     <h1>
-    <?php echo esc_html($welcomeText) ?>
-    <?php echo esc_html($welcomeTextSmall) ?>
+        <?php echo esc_html($welcomeText) ?>
     </h1>
+    <p>
+        <?php echo esc_html($welcomeTextSmall) ?>
+    </p>
 </section>

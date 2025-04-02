@@ -6,8 +6,9 @@
 
     <section>
         <p>
-            <?php echo esc_html($contactPhone) ?>
-            <?php echo esc_html($contactEmail) ?>
+            Contact us at: <br>
+            <?php echo esc_html($contactPhone) ?> <br>
+            <?php echo esc_html($contactEmail) ?> <br>
             <?php echo esc_html($contactAddress) ?>
         </p>
     </section>
