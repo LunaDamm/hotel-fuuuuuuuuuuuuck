@@ -15,6 +15,9 @@
           <li>
             <a href="<?php echo get_permalink(get_page_by_path("frontpage")->ID) ?>">Home</a>
           </li>
+          <li>
+            <a href="<?php echo get_permalink(get_page_by_path("events")->ID) ?>">Events</a>
+          </li>
         </ul>
         <?php get_search_form(); ?>
       </div>

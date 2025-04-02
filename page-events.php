@@ -1,7 +1,7 @@
 <?php get_header() ?>
 <?php
             $arguments = array(
-                "post_type" => "events",
+                "post_type" => "event",
                 "posts_per_page" => -1
             );
 
