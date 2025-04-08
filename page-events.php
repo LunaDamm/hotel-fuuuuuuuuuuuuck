@@ -22,6 +22,7 @@
 <section>
 
 <img src="<?php echo esc_url($eventImg['url']); ?>" alt="">
+    <h1><?php echo esc_html($eventTitle); ?></h1>
     <p><?php echo esc_html($eventDescription); ?></p>
     <p><?php echo esc_html($eventSchedule); ?></p>
 

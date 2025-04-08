@@ -1,8 +1,21 @@
 <?php
-    $testimonialImg = get_field('testimonial_image');
-    $testimonialName = get_field('testimonial_name');
-    $testimonialText = get_field('testimonial_text');
-    $testimonailRating = get_field('testimonial_rating');
+            $arguments = array(
+                "post_type" => "testimonial",
+                "posts_per_page" => -1,
+            );
+
+            $loop = new WP_Query($arguments);
+            ?>
+
+            <?php if($loop->have_posts()): ?>
+            <?php while($loop->have_posts()): $loop->the_post() ?>
+
+
+<?php
+    $testimonialImg = get_field('testimonial-image');
+    $testimonialName = get_the_title();
+    $testimonialText = get_field('quote');
+    $testimonailRating = get_field('rating');
 ?>
 
 <section>
@@ -11,3 +24,6 @@
     <p><?php echo esc_html($testimonialText); ?></p>
     <p><?php echo esc_html($testimonailRating); ?></p>
 </section>
+
+<?php endwhile ?>
+<?php endif ?>
